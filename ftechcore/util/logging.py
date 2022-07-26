@@ -17,7 +17,7 @@ LOGGING_CONFIG = {
             "datefmt": "%Y-%m-%d %H:%M:%S"
         },
         "json": {
-            "class": "refinery.logging_config.ProgramJsonFormatter",
+            "class": "ftechcore.util.logging.ProgramJsonFormatter",
             "format": """
                     asctime: %(asctime)s
                     created: %(created)f
