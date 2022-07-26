@@ -1,4 +1,5 @@
 import logging.config
+from pythonjsonlogger import jsonlogger
 
 
 LOGGING_CONFIG = {
