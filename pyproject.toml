@@ -27,7 +27,7 @@ dev = [
 ]
 
 [tool.setuptools]
-packages = ["farawaytech-py-core"]
+packages = ["ftechcore"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
