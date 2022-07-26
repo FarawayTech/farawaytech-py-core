@@ -1,0 +1,60 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "farawaytech-py-core"
+description = "FarawayTech Python Core"
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.0.1"
+license = { file = "LICENSE" }
+authors = [{ name = "Roman Prokofyev" }]
+dependencies = [
+    "python-json-logger>=0.1.11"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=22.3.0",
+    "flake8>=4.0.1",
+    "mypy>=0.961",
+    "pytest>=7.1.2",
+    "pre-commit>=2.19.0"
+]
+
+[tool.setuptools]
+packages = ["farawaytech-py-core"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["test"]
+
+[tool.black]
+line-length = 120
+target_version = ["py39"]
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.mypy]
+python_version = "3.9"
+
+[tool.coverage.run]
+relative_files = true
+branch = true
+# omit the tests themselves
+omit = ["*/tests/*", "*/tmp/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:"
+]
+
+ignore_errors = true
